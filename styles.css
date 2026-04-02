@@ -321,6 +321,16 @@ a:hover {
   letter-spacing: 0.02em;
 }
 
+.subsection-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.8vw, 1.9rem);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+  margin: 3rem 0 1.25rem;
+}
+
 .section-lead {
   font-size: 1.0625rem;
   line-height: 1.65;
@@ -354,6 +364,37 @@ a:hover {
 /* About */
 .section-about {
   background: var(--white);
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.person-card {
+  background: var(--surface-subtle);
+  border: 1px solid var(--line);
+  padding: 1.6rem;
+}
+
+.person-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 0.8rem;
+}
+
+.person-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 0.85rem;
+}
+
+.person-card p:last-child {
+  margin-bottom: 0;
 }
 
 /* Problem */
@@ -473,9 +514,79 @@ a:hover {
   margin-top: 0.5rem;
 }
 
+.stages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.stage-card {
+  border: 1px solid var(--line);
+  background: var(--surface-subtle);
+  padding: 1.4rem;
+}
+
+.stage-card h4 {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 0.9rem;
+}
+
+.bullet-list {
+  list-style: none;
+}
+
+.bullet-list li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 1rem;
+  color: var(--text);
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.bullet-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.05rem;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
 /* Cases */
 .section-cases {
   background: var(--surface-subtle);
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.project-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 1.4rem;
+}
+
+.project-card h4 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin-bottom: 0.9rem;
 }
 
 .cases-list {
@@ -708,6 +819,12 @@ a:hover {
 
 @media (max-width: 900px) {
   .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .people-grid,
+  .stages-grid,
+  .project-list {
     grid-template-columns: 1fr;
   }
 }
