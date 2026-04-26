@@ -4,9 +4,11 @@
   --navy: #0f172a;
   --graphite: #1e293b;
   --white: #ffffff;
-  --accent: #14b8a6;
-  --accent-hover: #0d9488;
-  --accent-muted: rgba(20, 184, 166, 0.15);
+  /* Brand accent: deep wine — premium, distinctive, fits finance/consulting tone */
+  --accent: #8B2332;
+  --accent-hover: #6E1A26;
+  --accent-muted: rgba(139, 35, 50, 0.12);
+  --accent-on-dark: #C04256; /* Lighter wine for use on navy hero (better contrast) */
   --text: #0f172a;
   --text-muted: #64748b;
   --text-on-dark: #f1f5f9;
@@ -14,6 +16,7 @@
   --line: rgba(15, 23, 42, 0.08);
   --line-on-dark: rgba(255, 255, 255, 0.1);
   --surface-subtle: #f8fafc;
+  --surface-warm: #fbf9f6; /* Warm off-white for editorial sections */
   --font-serif: "Spectral", Georgia, "Times New Roman", serif;
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --container: 1120px;
@@ -213,7 +216,7 @@ a:hover {
 
 .btn-primary:hover {
   background: var(--accent-hover);
-  box-shadow: 0 8px 32px rgba(20, 184, 166, 0.35);
+  box-shadow: 0 8px 32px rgba(139, 35, 50, 0.32);
   color: var(--white);
 }
 
@@ -245,8 +248,8 @@ a:hover {
 .hero {
   background: var(--navy);
   color: var(--text-on-dark);
-  padding: var(--space-section) 0 calc(var(--space-section) * 1.05);
-  min-height: 85vh;
+  padding: var(--space-section) 0 calc(var(--space-section) * 0.85);
+  min-height: 80vh;
   display: flex;
   align-items: center;
 }
@@ -259,8 +262,8 @@ a:hover {
   font-size: 0.6875rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--accent);
+  letter-spacing: 0.18em;
+  color: var(--accent-on-dark);
   margin-bottom: 2rem;
 }
 
@@ -278,30 +281,38 @@ a:hover {
   display: inline;
 }
 
-.hero-tagline {
-  margin-top: 1.75rem;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-on-dark-muted);
-}
-
 .hero-lead {
   margin-top: 2.5rem;
-  max-width: 36em;
+  max-width: 38em;
   font-size: clamp(1.125rem, 2vw, 1.375rem);
   font-weight: 400;
   line-height: 1.55;
   color: #cbd5e1;
 }
 
-.hero-support {
-  margin-top: 1.5rem;
-  max-width: 34em;
-  font-size: 1rem;
-  line-height: 1.65;
+.hero-stats {
+  margin-top: 2.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line-on-dark);
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--text-on-dark-muted);
+}
+
+.hero-stats span strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 0.25rem;
+  text-transform: none;
 }
 
 .hero-actions {
@@ -309,6 +320,50 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+/* ── Trust bar (Zaufali nam) ────────────────────────────────────── */
+
+.trust-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+  padding: 2.25rem 0;
+}
+
+.trust-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.trust-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.trust-clients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--navy);
+  letter-spacing: -0.005em;
+}
+
+.trust-clients span {
+  opacity: 0.78;
+  transition: opacity 0.2s ease;
+}
+
+.trust-clients span:hover {
+  opacity: 1;
 }
 
 /* ── Sections (shared) ──────────────────────────────────────────── */
@@ -377,6 +432,40 @@ a:hover {
   max-width: 36em;
 }
 
+/* ── Problem (NEW: zwięzła sekcja "dla kogo") ───────────────────── */
+
+.section-problem {
+  background: var(--white);
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.problem-card {
+  padding: 1.75rem 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.problem-card strong {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--navy);
+  display: block;
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.01em;
+}
+
+.problem-card p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
 /* ── About ──────────────────────────────────────────────────────── */
 
 .section-about {
@@ -389,11 +478,10 @@ a:hover {
   gap: 1.5rem;
 }
 
-/* Changed from article to div in HTML; keeping the same class name */
 .person-card {
   background: var(--surface-subtle);
   border: 1px solid var(--line);
-  padding: 1.6rem;
+  padding: 1.75rem;
 }
 
 .person-card h3 {
@@ -401,7 +489,8 @@ a:hover {
   font-size: 1.35rem;
   font-weight: 500;
   color: var(--navy);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.01em;
 }
 
 .person-card p {
@@ -413,6 +502,22 @@ a:hover {
 
 .person-card p:last-child {
   margin-bottom: 0;
+}
+
+.person-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.person-link:hover {
+  color: var(--accent-hover);
 }
 
 /* ── Services / Value grid ──────────────────────────────────────── */
@@ -444,6 +549,7 @@ a:hover {
   font-weight: 500;
   color: var(--navy);
   margin-bottom: 0.65rem;
+  letter-spacing: -0.01em;
 }
 
 .value-card p {
@@ -580,7 +686,7 @@ a:hover {
   font-size: 0.6875rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.18em;
   color: var(--accent);
   margin-bottom: 1.5rem;
 }
@@ -661,7 +767,7 @@ a:hover {
 .project-card {
   background: var(--white);
   border: 1px solid var(--line);
-  padding: 1.4rem;
+  padding: 1.6rem;
 }
 
 .project-card h4 {
@@ -670,6 +776,7 @@ a:hover {
   font-weight: 500;
   color: var(--navy);
   margin-bottom: 0.75rem;
+  letter-spacing: -0.005em;
 }
 
 .project-card p {
@@ -698,6 +805,80 @@ a:hover {
   font-size: 1rem;
   color: var(--text);
   border-bottom: 1px solid var(--line);
+}
+
+/* ── FAQ (NEW) ──────────────────────────────────────────────────── */
+
+.section-faq {
+  background: var(--white);
+}
+
+.faq-list {
+  margin-top: 2rem;
+  max-width: 44em;
+}
+
+.faq-item {
+  border-top: 1px solid var(--line);
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.5rem 2.5rem 1.5rem 0;
+  position: relative;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+  line-height: 1.4;
+  transition: color 0.2s ease;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--accent);
+  transition: transform 0.25s ease;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item summary:hover {
+  color: var(--accent);
+}
+
+.faq-answer {
+  padding: 0 2.5rem 1.5rem 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  max-width: 38em;
+}
+
+.faq-answer p {
+  margin-bottom: 0.85rem;
+}
+
+.faq-answer p:last-child {
+  margin-bottom: 0;
 }
 
 /* ── CTA block ──────────────────────────────────────────────────── */
@@ -739,8 +920,38 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+.contact-intro .section-lead {
+  margin-bottom: 2rem;
+}
+
+.contact-promise {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.contact-promise strong {
+  color: var(--navy);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+}
+
 .team-block {
   margin-top: 2.5rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .team-name {
@@ -748,7 +959,12 @@ a:hover {
   font-size: 1.25rem;
   font-weight: 500;
   color: var(--navy);
-  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.team-role {
+  font-size: 0.875rem;
+  color: var(--text-muted);
 }
 
 .contact-email {
@@ -821,7 +1037,14 @@ a:hover {
   min-height: 140px;
 }
 
-/* Form error message */
+.form-microcopy {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: -0.25rem;
+}
+
 .form-error {
   padding: 0.75rem 1rem;
   background: #fef2f2;
@@ -853,6 +1076,7 @@ a:hover {
   font-weight: 500;
   color: var(--white);
   margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
 }
 
 .footer-tagline {
@@ -863,7 +1087,7 @@ a:hover {
 
 .footer-claims {
   font-size: 0.8125rem;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-on-dark-muted);
   margin-bottom: 2rem;
@@ -897,6 +1121,10 @@ a:hover {
     padding-top: 0;
     font-size: 0.875rem;
     letter-spacing: 0.12em;
+  }
+
+  .trust-inner {
+    gap: 1.25rem;
   }
 }
 
@@ -950,5 +1178,9 @@ a:hover {
 
   .hero-actions .btn {
     width: 100%;
+  }
+
+  .hero-stats {
+    gap: 1.5rem;
   }
 }

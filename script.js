@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  /* ── Year ─────────────────────────────────────────────────────────── */
+  /* ── Year (auto-update w stopce) ──────────────────────────────────── */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
@@ -39,37 +39,32 @@
         navToggle.focus();
       }
     });
+
+    /* Close after clicking a nav link (mobile UX) */
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (nav.classList.contains('is-open')) {
+          nav.classList.remove('is-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+          navToggle.setAttribute('aria-label', 'Otwórz menu');
+        }
+      });
+    });
   }
 
-  /* ── Hero headline rotation — respects prefers-reduced-motion ──────── */
-  var headlineEl = document.querySelector('.hero-title-text');
-  if (headlineEl && headlineEl.dataset.headlines) {
-    var reduced =
-      window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (!reduced) {
-      var headlines;
-      try {
-        headlines = JSON.parse(headlineEl.dataset.headlines);
-      } catch (err) {
-        headlines = null;
-      }
-
-      if (headlines && headlines.length > 1) {
-        var i = 0;
-        headlineEl.style.transition = 'opacity 0.45s ease';
-
-        window.setInterval(function () {
-          i = (i + 1) % headlines.length;
-          headlineEl.style.opacity = '0';
-          window.setTimeout(function () {
-            headlineEl.textContent = headlines[i];
-            headlineEl.style.opacity = '1';
-          }, 220);
-        }, 7000);
-      }
-    }
-  }
+  /*
+   * ── Hero headline rotation — WYŁĄCZONE ────────────────────────────
+   *
+   * Decyzja: jeden mocny headline ("Po stronie klienta. Nie po stronie systemu.")
+   * pozwala odbiorcy zrozumieć propozycję wartości w pierwszych 3 sekundach.
+   * Rotacja co 7s rozwadniała komunikat i była niewidzialna dla SEO/indexerów.
+   *
+   * Kod rotacji zostaje zakomentowany na wypadek, gdyby kiedyś był potrzebny
+   * (np. w ramach testów A/B obsługiwanych po stronie serwera).
+   *
+   *   var headlineEl = document.querySelector('.hero-title-text');
+   *   if (headlineEl && headlineEl.dataset.headlines) { ... }
+   */
 
   /* ── Contact form ─────────────────────────────────────────────────── */
   var form = document.getElementById('contact-form');
@@ -106,7 +101,7 @@
       e.preventDefault();
       clearError();
 
-      /* Basic front-end validation */
+      /* Front-end validation */
       var name = form.querySelector('#name');
       var email = form.querySelector('#email');
       var message = form.querySelector('#message');
@@ -132,17 +127,42 @@
       setBtn(btn, 'loading');
 
       /*
-       * ── Real submission ──────────────────────────────────────────────
-       * Replace the URL below with your actual endpoint, e.g. Formspree:
-       *   https://formspree.io/f/YOUR_FORM_ID
+       * ════════════════════════════════════════════════════════════════
+       *  KONFIGURACJA FORMULARZA — WYMAGA UZUPEŁNIENIA
+       * ════════════════════════════════════════════════════════════════
        *
-       * To use Formspree:
-       *   1. Sign up at formspree.io
-       *   2. Create a new form and copy the endpoint URL
-       *   3. Replace the placeholder URL below
-       * ────────────────────────────────────────────────────────────────
+       *  WAŻNE: Bez prawidłowego endpointu formularz NIE WYSYŁA wiadomości.
+       *
+       *  Krok 1: Załóż konto na https://formspree.io (darmowy plan: 50 wiadomości/mies)
+       *  Krok 2: Utwórz nowy formularz, skopiuj endpoint URL
+       *          (format: https://formspree.io/f/abcdef12)
+       *  Krok 3: Podmień wartość poniżej na swój prawdziwy endpoint.
+       *  Krok 4: Pierwsza wiadomość musi być potwierdzona w mailu (Formspree
+       *          weryfikuje adres dostarczenia przy pierwszym użyciu).
+       *
+       *  Alternatywy: Web3Forms, Getform, Basin, Netlify Forms, własny backend.
+       *
+       *  Dopóki FORM_ENDPOINT zawiera 'YOUR_FORM_ID', formularz pokazuje
+       *  użytkownikowi wyraźny komunikat z fallbackiem mailowym, zamiast
+       *  cicho wysyłać dane w próżnię.
+       * ════════════════════════════════════════════════════════════════
        */
       var FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+
+      /* Guard: jeśli endpoint nie został podmieniony, nie wysyłaj — pokaż fallback */
+      if (FORM_ENDPOINT.indexOf('YOUR_FORM_ID') !== -1) {
+        setBtn(btn, 'reset', originalText);
+        showError(
+          'Formularz jest jeszcze konfigurowany. Napisz prosto na ' +
+          'kontakt@axite.pl — odpowiemy w ciągu 24h.'
+        );
+        // eslint-disable-next-line no-console
+        console.warn(
+          '[Axite] Form endpoint not configured. ' +
+          'Edit script.js → FORM_ENDPOINT and replace YOUR_FORM_ID.'
+        );
+        return;
+      }
 
       fetch(FORM_ENDPOINT, {
         method: 'POST',
@@ -170,7 +190,7 @@
         .catch(function (err) {
           setBtn(btn, 'reset', originalText);
           showError(
-            err.message ||
+            (err && err.message) ||
             'Nie udało się wysłać wiadomości. Napisz bezpośrednio na kontakt@axite.pl.'
           );
         });
