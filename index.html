@@ -3,291 +3,398 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Axite — niezależny partner we wdrożeniach ERP. Analiza przedwdrożeniowa, systemy finansowe, governance i kontrola procesów. Finanse, dane, struktura. Boutique consulting dla zarządów.">
+
+  <!-- SEO: shortened to ~155 chars -->
+  <meta name="description" content="Axite — niezależny partner we wdrożeniach ERP. Analiza przedwdrożeniowa, finanse, governance i kontrola procesów dla zarządów.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://axite.pl/">
+
+  <!-- Open Graph (LinkedIn / social sharing) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://axite.pl/">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="Axite — ERP na właściwej osi">
+  <meta property="og:description" content="Boutique consulting dla zarządów. Finanse, dane, struktura. Niezależny partner we wdrożeniach ERP.">
+  <!-- og:image: add a 1200×630 px social card image when ready -->
+  <!-- <meta property="og:image" content="https://axite.pl/og-image.jpg"> -->
+
   <title>Axite — ERP na właściwej osi | Doradztwo wdrożeniowe</title>
+
+  <!-- Favicon — replace favicon.ico / favicon.svg with your actual files -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Przejdź do treści</a>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#" class="logo">Axite</a>
-      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Otwórz menu">
-        <span></span><span></span><span></span>
-      </button>
-      <nav id="site-nav" class="nav" aria-label="Nawigacja główna">
-        <a href="#o-nas">O nas</a>
-        <a href="#oferta">Oferta</a>
-        <a href="#jak">Jak pracujemy</a>
-        <a href="#doswiadczenie">Nasze doświadczenie</a>
-        <a href="#kontakt" class="btn btn-nav">Kontakt</a>
-      </nav>
+<a class="skip-link" href="#main">Przejdź do treści</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="logo">Axite</a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Otwórz menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="nav" aria-label="Nawigacja główna">
+      <a href="#o-nas">O nas</a>
+      <a href="#oferta">Oferta</a>
+      <a href="#jak">Jak pracujemy</a>
+      <a href="#doswiadczenie">Nasze doświadczenie</a>
+      <a href="#kontakt" class="btn btn-nav">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="container hero-inner">
+      <p class="hero-eyebrow">Boutique consulting · ERP · finanse · transformacje</p>
+      <h1 id="hero-heading" class="hero-title">
+        <span class="hero-title-text" data-headlines='["ERP na właściwej osi","Ustawiamy ERP jako stabilną oś biznesu","Porządkujemy finanse i procesy w systemie ERP"]'>ERP na właściwej osi</span>
+      </h1>
+      <!-- Decorative tagline — aria-hidden is intentional; it duplicates info already conveyed -->
+      <p class="hero-tagline" aria-hidden="true">Struktura dla ERP · Dane. Procesy. Kontrola.</p>
+      <p class="hero-lead">Wprowadzamy precyzję tam, gdzie system spotyka się z rzeczywistością biznesu.</p>
+      <p class="hero-support">Pracujemy z zarządami firm, które chcą mieć kontrolę nad danymi, procesami i ryzykiem — zanim zrobi się problem.</p>
+      <div class="hero-actions">
+        <a href="#kontakt" class="btn btn-primary">Umów rozmowę</a>
+        <a href="#jak" class="btn btn-secondary">Sprawdź, jak pracujemy</a>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="container hero-inner">
-        <p class="hero-eyebrow">Boutique consulting · ERP · finanse · transformacje</p>
-        <h1 id="hero-heading" class="hero-title">
-          <span class="hero-title-text" data-headlines='["ERP na właściwej osi","Ustawiamy ERP jako stabilną oś biznesu","Porządkujemy finanse i procesy w systemie ERP"]'>ERP na właściwej osi</span>
-        </h1>
-        <p class="hero-tagline" aria-hidden="true">Struktura dla ERP · Dane. Procesy. Kontrola.</p>
-        <p class="hero-lead">Wprowadzamy precyzję tam, gdzie system spotyka się z rzeczywistością biznesu.</p>
-        <p class="hero-support">Pracujemy z zarządami firm, które chcą mieć kontrolę nad danymi, procesami i ryzykiem — zanim zrobi się problem.</p>
-        <div class="hero-actions">
-          <a href="#kontakt" class="btn btn-primary">Umów rozmowę</a>
-          <a href="#jak" class="btn btn-secondary">Sprawdź, jak pracujemy</a>
+  <!-- O NAS -->
+  <section id="o-nas" class="section section-about" aria-labelledby="o-nas-heading">
+    <div class="container narrow">
+      <h2 id="o-nas-heading" class="section-title">O nas</h2>
+      <p class="section-kicker">Dwie perspektywy: finanse i systemy ERP.</p>
+
+      <div class="people-grid">
+        <!-- Changed from <article> to <div>: these bios are not self-contained redistributable content -->
+        <div class="person-card">
+          <h3>Małgorzata Koc</h3>
+          <p>Małgorzata Koc to liderka transformacji finansowej i operacyjnej z ponad 20-letnim doświadczeniem w zarządzaniu finansami oraz wdrożeniach systemów ERP.</p>
+          <p>Łączy perspektywę Chief Accountant z rolą Project Managera wdrożeń, prowadząc organizacje przez złożone zmiany - od uporządkowania procesów i danych po skuteczne implementacje systemów takich jak SAP Business One czy Microsoft Dynamics 365 Business Central.</p>
+          <p>Odpowiadała za finanse i raportowanie nawet kilkudziesięciu spółek w ramach grup kapitałowych, zarządzając zespołami i budując standardy pracy w obszarze finansów, raportowania i compliance.</p>
+        </div>
+
+        <div class="person-card">
+          <h3>Elżbieta Warszawska</h3>
+          <p>Elżbieta Warszawska to ekspertka w obszarze finansów i systemów ERP, z ponad 15-letnim doświadczeniem w księgowości oraz praktycznym wdrażaniu rozwiązań finansowo-księgowych.</p>
+          <p>Specjalizuje się w analizie i optymalizacji procesów finansowych oraz wdrożeniach SAP Business One - od etapu analizy przedwdrożeniowej, przez konfigurację systemu, aż po wsparcie użytkowników i zarządzanie jakością danych.</p>
+          <p>Łączy silne kompetencje analityczne z doświadczeniem operacyjnym, zarządzając zespołami oraz dbając o spójność procesów, danych i wymogów raportowych w organizacjach.</p>
         </div>
       </div>
-    </section>
 
-    <section id="o-nas" class="section section-about" aria-labelledby="o-nas-heading">
-      <div class="container narrow">
-        <h2 id="o-nas-heading" class="section-title">O nas</h2>
-        <p class="section-kicker">Dwie perspektywy: finanse i systemy ERP.</p>
-        <div class="people-grid">
-          <article class="person-card">
-            <h3>Małgorzata Koc</h3>
-            <p>Małgorzata Koc to liderka transformacji finansowej i operacyjnej z ponad 20-letnim doświadczeniem w zarządzaniu finansami oraz wdrożeniach systemów ERP.</p>
-            <p>Łączy perspektywę Chief Accountant z rolą Project Managera wdrożeń, prowadząc organizacje przez złożone zmiany - od uporządkowania procesów i danych po skuteczne implementacje systemów takich jak SAP Business One czy Microsoft Dynamics 365 Business Central.</p>
-            <p>Odpowiadała za finanse i raportowanie nawet kilkudziesięciu spółek w ramach grup kapitałowych, zarządzając zespołami i budując standardy pracy w obszarze finansów, raportowania i compliance.</p>
-          </article>
-          <article class="person-card">
-            <h3>Elżbieta Warszawska</h3>
-            <p>Elżbieta Warszawska to ekspertka w obszarze finansów i systemów ERP, z ponad 15-letnim doświadczeniem w księgowości oraz praktycznym wdrażaniu rozwiązań finansowo-księgowych.</p>
-            <p>Specjalizuje się w analizie i optymalizacji procesów finansowych oraz wdrożeniach SAP Business One - od etapu analizy przedwdrożeniowej, przez konfigurację systemu, aż po wsparcie użytkowników i zarządzanie jakością danych.</p>
-            <p>Łączy silne kompetencje analityczne z doświadczeniem operacyjnym, zarządzając zespołami oraz dbając o spójność procesów, danych i wymogów raportowych w organizacjach.</p>
-          </article>
-        </div>
-        <h3 class="subsection-title">Wspólny mianownik</h3>
-        <div class="prose">
-          <p>Axite powstało z połączenia dwóch perspektyw, które w większości organizacji funkcjonują osobno - finansów i systemów.</p>
-          <p>Przez lata pracy w rolach głównych księgowych oraz liderów wdrożeń ERP widziałyśmy, że problemy firm rzadko wynikają z braku narzędzi. Znacznie częściej ich źródłem są nieuporządkowane procesy, niespójne dane i brak powiązania między finansami a operacjami.</p>
-          <p>To doświadczenie stało się fundamentem wspólnego podejścia: najpierw porządkujemy sposób działania firmy, dopiero potem wdrażamy system. Dzięki temu zmiana nie kończy się na technologii - ale realnie poprawia sposób zarządzania.</p>
-        </div>
+      <h3 class="subsection-title">Wspólny mianownik</h3>
+      <div class="prose">
+        <p>Axite powstało z połączenia dwóch perspektyw, które w większości organizacji funkcjonują osobno - finansów i systemów.</p>
+        <p>Przez lata pracy w rolach głównych księgowych oraz liderów wdrożeń ERP widziałyśmy, że problemy firm rzadko wynikają z braku narzędzi. Znacznie częściej ich źródłem są nieuporządkowane procesy, niespójne dane i brak powiązania między finansami a operacjami.</p>
+        <p>To doświadczenie stało się fundamentem wspólnego podejścia: najpierw porządkujemy sposób działania firmy, dopiero potem wdrażamy system. Dzięki temu zmiana nie kończy się na technologii - ale realnie poprawia sposób zarządzania.</p>
       </div>
-    </section>
-
-    <section id="oferta" class="section section-services" aria-labelledby="oferta-heading">
-      <div class="container">
-        <h2 id="oferta-heading" class="section-title">Axite - oferta i marka</h2>
-        <p class="section-lead muted">Axite to butikowa firma doradcza, która pomaga firmom uporządkować finanse, procesy i systemy ERP tak, aby zaczęły działać jako jeden spójny mechanizm.</p>
-        <div class="prose">
-          <p>Łączymy doświadczenie operacyjne (zarządzanie finansami, zespołami, raportowaniem) z praktyką wdrożeń systemów, dzięki czemu rozumiemy zarówno biznes, jak i technologię.</p>
-          <p>Nie zaczynamy od systemu. Zaczynamy od zrozumienia, jak firma działa - i dopiero na tej podstawie projektujemy rozwiązania, które porządkują procesy, poprawiają jakość danych i wspierają podejmowanie decyzji.</p>
-        </div>
-        <div class="value-grid">
-          <article class="value-card">
-            <h3>Porządkowanie procesów</h3>
-            <p>Ustalamy spójny sposób działania między finansami i operacjami.</p>
-          </article>
-          <article class="value-card">
-            <h3>Jakość danych</h3>
-            <p>Budujemy podstawę raportowania i decyzji opartą na wiarygodnych danych.</p>
-          </article>
-          <article class="value-card">
-            <h3>Decyzje zarządcze</h3>
-            <p>Projektujemy rozwiązania, które wspierają zarząd w codziennym zarządzaniu.</p>
-          </article>
-          <article class="value-card">
-            <h3>Spójność finansów i ERP</h3>
-            <p>Łączymy perspektywę biznesu, finansów i technologii w jednym modelu pracy.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="jak" class="section section-how" aria-labelledby="jak-heading">
-      <div class="container narrow">
-        <h2 id="jak-heading" class="section-title">Jak pracujemy</h2>
-        <p class="section-lead">Pracujemy z firmami, które wiedzą, że potrzebują zmiany - ale nie mają zasobów, czasu lub jasnej koncepcji, jak ją przeprowadzić.</p>
-        <p>Najczęściej trafiamy do organizacji, które:</p>
-        <ul class="how-list">
-          <li>rosną szybciej niż ich procesy,</li>
-          <li>mają systemy, które nie wspierają decyzji,</li>
-          <li>czują, że dane nie odzwierciedlają rzeczywistości biznesowej.</li>
-        </ul>
-        <p class="how-punch">W takich sytuacjach pełnimy rolę brakującego ogniwa - łączymy perspektywę zarządu, zespołów operacyjnych i firm wdrożeniowych. Prowadzimy cały proces zmiany - od pierwszej decyzji o potrzebie wdrożenia, aż do momentu, w którym system zaczyna realnie działać i wspiera zarządzanie.</p>
-
-        <h3 class="subsection-title">Nasze podejście</h3>
-        <div class="prose">
-          <p>Nie zaczynamy od systemu. Zaczynamy od zrozumienia, jak działa firma - jej procesów, danych i potrzeb decyzyjnych. Dopiero na tej podstawie dobieramy rozwiązania i prowadzimy wdrożenie.</p>
-          <p>Dzięki temu technologia nie jest celem sama w sobie - tylko narzędziem, które porządkuje sposób działania organizacji.</p>
-        </div>
-
-        <h3 class="subsection-title">Zakres naszego zaangażowania</h3>
-        <div class="stages-grid">
-          <article class="stage-card">
-            <h4>Zrozumienie i przygotowanie</h4>
-            <ul class="bullet-list">
-              <li>analiza potrzeb biznesowych i procesów</li>
-              <li>uporządkowanie obszaru finansów i raportowania</li>
-              <li>porównanie i wybór systemu ERP dopasowanego do organizacji</li>
-              <li>wsparcie w rozmowach i negocjacjach z dostawcami</li>
-            </ul>
-          </article>
-          <article class="stage-card">
-            <h4>Przygotowanie do wdrożenia</h4>
-            <ul class="bullet-list">
-              <li>analiza przedwdrożeniowa</li>
-              <li>projektowanie docelowych procesów i schematów księgowań</li>
-              <li>przygotowanie danych i struktury raportowania</li>
-            </ul>
-          </article>
-          <article class="stage-card">
-            <h4>Wdrożenie</h4>
-            <ul class="bullet-list">
-              <li>współpraca z firmą wdrożeniową po stronie klienta</li>
-              <li>przygotowanie scenariuszy testowych i testy funkcjonalne</li>
-              <li>wsparcie w przygotowaniu do go-live</li>
-            </ul>
-          </article>
-          <article class="stage-card">
-            <h4>Stabilizacja i rozwój</h4>
-            <ul class="bullet-list">
-              <li>szkolenia użytkowników i przygotowanie instrukcji</li>
-              <li>wsparcie powdrożeniowe</li>
-              <li>rozwiązywanie złożonych problemów wdrożeniowych i powdrożeniowych</li>
-              <li>dalsza optymalizacja procesów i raportowania</li>
-            </ul>
-          </article>
-        </div>
-
-        <h3 class="subsection-title">Co nas wyróżnia</h3>
-        <div class="prose">
-          <p>Nie jesteśmy firmą wdrożeniową. Jesteśmy po stronie klienta.</p>
-          <p>Łączymy doświadczenie finansowe, procesowe i systemowe, dzięki czemu rozumiemy zarówno język zarządu, jak i realia pracy zespołów oraz ograniczenia technologii.</p>
-          <p>To pozwala nam prowadzić wdrożenia, które nie kończą się na uruchomieniu systemu - ale realnie zmieniają sposób działania firmy.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="doswiadczenie" class="section section-cases" aria-labelledby="cases-heading">
-      <div class="container">
-        <h2 id="cases-heading" class="section-title">Nasze doświadczenie</h2>
-        <p class="section-lead muted">Realizowałyśmy wdrożenia systemów ERP w organizacjach o wysokim poziomie złożoności - obejmujących dziesiątki spółek, setki użytkowników i zaawansowane procesy finansowe.</p>
-        <p class="section-lead muted">Nasze doświadczenie obejmuje zarówno projektowanie docelowych modeli finansowych i procesowych, jak i prowadzenie wdrożeń oraz stabilizację systemów po uruchomieniu.</p>
-
-        <h3 class="subsection-title">Wybrane projekty</h3>
-        <div class="project-list">
-          <article class="project-card">
-            <h4>SAP Business One - Grupa Capital Park (real estate)</h4>
-            <p>Wdrożenie obejmowało kompleksowe uporządkowanie obszaru finansowego i raportowego dla grupy obejmującej ok. 60 spółek i 50 nieruchomości.</p>
-            <ul class="bullet-list">
-              <li>wdrożenie elektronicznego obiegu dokumentów i pełnej księgowości grupy</li>
-              <li>przygotowanie jednostkowego i skonsolidowanego raportowania (statutowego i zarządczego)</li>
-              <li>automatyzacja rozliczeń międzyspółkowych oraz procesów cash-flow</li>
-              <li>zarządzanie pożyczkami wewnątrzgrupowymi</li>
-              <li>zaprojektowanie schematów księgowań dla nieruchomości inwestycyjnych</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <h4>SAP Business One - Grupa Globalworth (real estate)</h4>
-            <p>Projekt obejmował wdrożenie systemu dla grupy obejmującej ok. 40 spółek oraz portfel nieruchomości z ponad 700 najemcami.</p>
-            <ul class="bullet-list">
-              <li>integracja księgowości, property i facility management</li>
-              <li>raportowanie jednostkowe i skonsolidowane (również w EUR)</li>
-              <li>automatyzacja procesów międzyspółkowych i cash-flow</li>
-              <li>zarządzanie procesami inwestycyjnymi (capex)</li>
-              <li>wdrożenie spójnych zasad księgowania dla nieruchomości inwestycyjnych</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <h4>Microsoft Dynamics 365 Business Central - Grupa Luxvet (usługi weterynaryjne)</h4>
-            <p>Wdrożenie systemu dla rozwijającej się grupy o rozproszonej strukturze.</p>
-            <ul class="bullet-list">
-              <li>księgowość i raportowanie dla wielu spółek</li>
-              <li>przygotowanie do KSeF oraz JPK CIT</li>
-              <li>wdrożenie elektronicznego obiegu dokumentów</li>
-              <li>automatyzacja cash-flow i procesów inwestycyjnych</li>
-              <li>dostosowanie systemu do specyfiki dynamicznie rosnącej organizacji</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <h4>Enova (księgowość i kadry) - KR Group / Luxvet</h4>
-            <p>Projekty obejmujące wdrożenia i dostosowanie systemów do złożonych struktur organizacyjnych.</p>
-            <ul class="bullet-list">
-              <li>projektowanie planów kont i wymiarów analitycznych dla różnych branż</li>
-              <li>wdrożenie kadr i płac dla organizacji zatrudniającej ponad 800 pracowników</li>
-              <li>dostosowanie systemów do złożonych procesów HR i raportowania</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <h4>Inne systemy</h4>
-            <p>Pracowałyśmy również z rozwiązaniami takimi jak Comarch Optima oraz Oracle, wspierając organizacje w dostosowaniu systemów do ich procesów oraz w rozwiązywaniu złożonych problemów wdrożeniowych i powdrożeniowych.</p>
-          </article>
-        </div>
-
-        <h3 class="subsection-title">Co łączy te projekty</h3>
-        <ul class="cases-list">
-          <li>uporządkowanie procesów przed wdrożeniem systemu</li>
-          <li>zaprojektowanie spójnego modelu danych i raportowania</li>
-          <li>automatyzacja kluczowych obszarów finansowych</li>
-          <li>przełożenie potrzeb biznesu na rozwiązania systemowe</li>
-        </ul>
-        <p class="positioning-note">Dzięki temu wdrożenia nie kończą się na uruchomieniu systemu - ale realnie poprawiają sposób zarządzania organizacją.</p>
-      </div>
-    </section>
-
-    <section class="section section-cta-block" aria-labelledby="cta-heading">
-      <div class="container narrow">
-        <h2 id="cta-heading" class="cta-title">Jeśli ERP ma być fundamentem — nie zaczynaj bez struktury</h2>
-        <a href="#kontakt" class="btn btn-primary btn-large">Umów rozmowę</a>
-      </div>
-    </section>
-
-    <section id="kontakt" class="section section-contact" aria-labelledby="kontakt-heading">
-      <div class="container contact-layout">
-        <div class="contact-intro">
-          <h2 id="kontakt-heading" class="section-title">Kontakt</h2>
-          <p class="section-lead muted">Napisz, na jakim etapie jest projekt <strong>ERP</strong> lub audyt <strong>danych finansowych</strong>. Odpowiemy zwięźle.</p>
-          <div class="team-block">
-            <p class="team-name">Małgorzata Koc</p>
-            <p class="team-name">Elżbieta Warszawska</p>
-          </div>
-          <p class="contact-email"><a href="mailto:kontakt@axite.pl">kontakt@axite.pl</a></p>
-        </div>
-        <form class="contact-form" id="contact-form">
-          <div class="form-row">
-            <label for="name">Imię i nazwisko</label>
-            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Imię i nazwisko">
-          </div>
-          <div class="form-row">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required autocomplete="email" placeholder="email@firma.pl">
-          </div>
-          <div class="form-row">
-            <label for="company">Firma <span class="optional">(opcjonalnie)</span></label>
-            <input type="text" id="company" name="company" autocomplete="organization" placeholder="Nazwa firmy">
-          </div>
-          <div class="form-row">
-            <label for="message">Wiadomość</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Krótko: etap projektu, system, oczekiwania."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Wyślij</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p class="footer-brand">Axite</p>
-      <p class="footer-tagline">Niezależny partner we wdrożeniach ERP · finanse · governance · kontrola procesów.</p>
-      <p class="footer-claims" aria-hidden="true">ERP bez chaosu · Finanse pod kontrolą systemu</p>
-      <p class="footer-copy">&copy; <span id="year"></span> Axite. Wszelkie prawa zastrzeżone.</p>
     </div>
-  </footer>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- OFERTA -->
+  <section id="oferta" class="section section-services" aria-labelledby="oferta-heading">
+    <div class="container">
+      <!-- Fixed: was "Axite - oferta i marka" (draft title), now matches nav link -->
+      <h2 id="oferta-heading" class="section-title">Oferta</h2>
+      <p class="section-lead muted">Axite to butikowa firma doradcza, która pomaga firmom uporządkować finanse, procesy i systemy ERP tak, aby zaczęły działać jako jeden spójny mechanizm.</p>
+
+      <div class="prose">
+        <p>Łączymy doświadczenie operacyjne (zarządzanie finansami, zespołami, raportowaniem) z praktyką wdrożeń systemów, dzięki czemu rozumiemy zarówno biznes, jak i technologię.</p>
+        <p>Nie zaczynamy od systemu. Zaczynamy od zrozumienia, jak firma działa - i dopiero na tej podstawie projektujemy rozwiązania, które porządkują procesy, poprawiają jakość danych i wspierają podejmowanie decyzji.</p>
+      </div>
+
+      <div class="value-grid">
+        <article class="value-card">
+          <h3>Porządkowanie procesów</h3>
+          <p>Ustalamy spójny sposób działania między finansami i operacjami.</p>
+        </article>
+        <article class="value-card">
+          <h3>Jakość danych</h3>
+          <p>Budujemy podstawę raportowania i decyzji opartą na wiarygodnych danych.</p>
+        </article>
+        <article class="value-card">
+          <h3>Decyzje zarządcze</h3>
+          <p>Projektujemy rozwiązania, które wspierają zarząd w codziennym zarządzaniu.</p>
+        </article>
+        <article class="value-card">
+          <h3>Spójność finansów i ERP</h3>
+          <p>Łączymy perspektywę biznesu, finansów i technologii w jednym modelu pracy.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- JAK PRACUJEMY -->
+  <section id="jak" class="section section-how" aria-labelledby="jak-heading">
+    <div class="container narrow">
+      <h2 id="jak-heading" class="section-title">Jak pracujemy</h2>
+      <p class="section-lead">Pracujemy z firmami, które wiedzą, że potrzebują zmiany - ale nie mają zasobów, czasu lub jasnej koncepcji, jak ją przeprowadzić.</p>
+
+      <p>Najczęściej trafiamy do organizacji, które:</p>
+      <ul class="how-list">
+        <li>rosną szybciej niż ich procesy,</li>
+        <li>mają systemy, które nie wspierają decyzji,</li>
+        <li>czują, że dane nie odzwierciedlają rzeczywistości biznesowej.</li>
+      </ul>
+
+      <p class="how-punch">W takich sytuacjach pełnimy rolę brakującego ogniwa - łączymy perspektywę zarządu, zespołów operacyjnych i firm wdrożeniowych. Prowadzimy cały proces zmiany - od pierwszej decyzji o potrzebie wdrożenia, aż do momentu, w którym system zaczyna realnie działać i wspiera zarządzanie.</p>
+
+      <h3 class="subsection-title">Nasze podejście</h3>
+      <div class="prose">
+        <p>Nie zaczynamy od systemu. Zaczynamy od zrozumienia, jak działa firma - jej procesów, danych i potrzeb decyzyjnych. Dopiero na tej podstawie dobieramy rozwiązania i prowadzimy wdrożenie.</p>
+        <p>Dzięki temu technologia nie jest celem sama w sobie - tylko narzędziem, które porządkuje sposób działania organizacji.</p>
+      </div>
+
+      <h3 class="subsection-title">Zakres naszego zaangażowania</h3>
+      <div class="stages-grid">
+        <article class="stage-card">
+          <h4>Zrozumienie i przygotowanie</h4>
+          <ul class="bullet-list">
+            <li>analiza potrzeb biznesowych i procesów</li>
+            <li>uporządkowanie obszaru finansów i raportowania</li>
+            <li>porównanie i wybór systemu ERP dopasowanego do organizacji</li>
+            <li>wsparcie w rozmowach i negocjacjach z dostawcami</li>
+          </ul>
+        </article>
+        <article class="stage-card">
+          <h4>Przygotowanie do wdrożenia</h4>
+          <ul class="bullet-list">
+            <li>analiza przedwdrożeniowa</li>
+            <li>projektowanie docelowych procesów i schematów księgowań</li>
+            <li>przygotowanie danych i struktury raportowania</li>
+          </ul>
+        </article>
+        <article class="stage-card">
+          <h4>Wdrożenie</h4>
+          <ul class="bullet-list">
+            <li>współpraca z firmą wdrożeniową po stronie klienta</li>
+            <li>przygotowanie scenariuszy testowych i testy funkcjonalne</li>
+            <li>wsparcie w przygotowaniu do go-live</li>
+          </ul>
+        </article>
+        <article class="stage-card">
+          <h4>Stabilizacja i rozwój</h4>
+          <ul class="bullet-list">
+            <li>szkolenia użytkowników i przygotowanie instrukcji</li>
+            <li>wsparcie powdrożeniowe</li>
+            <li>rozwiązywanie złożonych problemów wdrożeniowych i powdrożeniowych</li>
+            <li>dalsza optymalizacja procesów i raportowania</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="subsection-title">Co nas wyróżnia</h3>
+      <div class="prose">
+        <p>Nie jesteśmy firmą wdrożeniową. Jesteśmy po stronie klienta.</p>
+        <p>Łączymy doświadczenie finansowe, procesowe i systemowe, dzięki czemu rozumiemy zarówno język zarządu, jak i realia pracy zespołów oraz ograniczenia technologii.</p>
+        <p>To pozwala nam prowadzić wdrożenia, które nie kończą się na uruchomieniu systemu - ale realnie zmieniają sposób działania firmy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Z PRAKTYKI WDROŻEŃ -->
+  <section id="praktyka" class="section section-story" aria-labelledby="praktyka-heading">
+    <div class="container narrow">
+      <p class="story-eyebrow">Z praktyki wdrożeń</p>
+      <h2 id="praktyka-heading" class="section-title story-title">Dlaczego go-live jest decyzją biznesową, nie techniczną</h2>
+      <p class="story-lead">Wdrożenia ERP rzadko zawodzą z powodu technologii. Najczęściej zawodzą tam, gdzie biznes, finanse i firma wdrożeniowa zaczynają mówić różnymi językami — a nikt po stronie klienta nie ma czasu, żeby to wcześnie zauważyć.</p>
+
+      <div class="story-divider" aria-hidden="true"></div>
+
+      <h3 class="subsection-title">Wdrożenie to projekt wysokiego ryzyka</h3>
+      <div class="prose">
+        <p>Z perspektywy zarządu wdrożenie ERP wygląda jak inwestycja w narzędzie. Z perspektywy operacyjnej — to projekt zarządzania zmianą, który dotyka jednocześnie procesów, finansów, zespołów i terminów. Decyzje, które na etapie analizy wyglądają na detale (jak konfiguracja ścieżki akceptacji, struktura planu kont, zakres migracji danych), w trakcie eksploatacji decydują o tym, czy firma w ogóle będzie działać.</p>
+        <p>Dlatego wdrożenie nie zawodzi nagle. Zawodzi cicho — w odstępach między spotkaniami, w niedopowiedzeniach przy zmianie osób, w założeniach, których nikt nie zakwestionował.</p>
+      </div>
+
+      <h3 class="subsection-title">Sytuacja: kluczowy element wdrożenia</h3>
+      <div class="prose">
+        <p>W jednym z prowadzonych przez nas projektów firma wdrażała Microsoft Dynamics 365 Business Central. Krytycznym elementem był elektroniczny obieg dokumentów — kilkadziesiąt oddziałów, setka managerów z prawem akceptacji, trzystopniowa ścieżka zależna od wartości dokumentu, prawie osiem tysięcy faktur miesięcznie.</p>
+        <p>Bez sprawnie działającego obiegu wdrożenie nie miało sensu. Brak akceptacji oznaczałby brak kontroli nad kosztami, opóźnienia płatności wobec dostawców, blokady zamówień, a w konsekwencji wstrzymanie sprzedaży. To nie był element „do dopracowania po go-live”. To był warunek, by firma w ogóle działała.</p>
+        <p>Wymagania zostały dokładnie opisane w analizie przedwdrożeniowej. Dokument istniał, intencje były jasne, priorytety ustalone.</p>
+      </div>
+
+      <h3 class="subsection-title">Niewidzialny moment, w którym projekt się rozjeżdża</h3>
+      <div class="prose">
+        <p>Pomiędzy zakończeniem analizy a startem prac wdrożeniowych po stronie firmy wdrożeniowej zmienił się Project Manager. Sama w sobie zmiana nie jest niczym nadzwyczajnym — w długich projektach to bywa nieuniknione. Problem leżał gdzie indziej: nowa osoba odczytała priorytety inaczej. Założyła, że obieg dokumentów może poczekać kilka tygodni po starcie systemu. Że firma „jakoś sobie poradzi” w okresie przejściowym.</p>
+        <p>To nie była zła wola. To była różnica w rozumieniu tego, co naprawdę krytyczne — różnica, której nie da się odczytać z dokumentu, jeśli nie zna się biznesu klienta.</p>
+        <p>Na dwa miesiące przed planowanym go-live okazało się, że konfiguracja ścieżek akceptacji jest na bardzo wczesnym etapie. Po stronie wdrożeniowej dopiero zaczynało się prawdziwe zapoznawanie z wymaganiami. Czas potrzebny na konfigurację, testy, poprawki i szkolenia użytkowników po prostu nie mieścił się w pozostałym kalendarzu.</p>
+      </div>
+
+      <h3 class="subsection-title">Decyzja, której nie podejmuje się łatwo</h3>
+      <div class="prose">
+        <p>Trzeba było podjąć decyzję, której nikt — ani zarząd, ani dział finansowy, ani firma wdrożeniowa — nie chciał: przesunąć go-live. Kosztem dodatkowego miesiąca pracy zespołu księgowego klienta i kolejnej faktury z biura rachunkowego. W zamian za uniknięcie czegoś znacznie droższego: chaosu operacyjnego w pierwszych tygodniach pracy na nowym systemie.</p>
+        <p>Równolegle klient wymusił zmianę Project Managera po stronie firmy wdrożeniowej. Nie dlatego, że szukał winnego — dlatego, że projekt potrzebował kogoś, kto zrozumie, dlaczego obieg dokumentów jest w tym wdrożeniu nienegocjowalny.</p>
+      </div>
+
+      <h3 class="subsection-title">Co naprawdę zadecydowało</h3>
+      <div class="prose">
+        <p>Ostatecznie miesiąc opóźnienia pozwolił dokończyć prace, przeprowadzić rzetelne testy i przygotować użytkowników. Go-live się udał. Firma weszła w nowy system z działającym obiegiem dokumentów, kontrolą kosztów i terminowymi płatnościami od pierwszego dnia.</p>
+        <p>Ale to nie technologia uratowała ten projekt. Uratowała go decyzja zarządcza — podjęta w momencie, w którym łatwiej byłoby przymknąć oko, dotrzymać terminu i liczyć na to, że „jakoś się ułoży”.</p>
+      </div>
+
+      <blockquote class="pull-quote">
+        <p>Przesunięcie go-live nie jest porażką. Porażką jest go-live w momencie, kiedy firma nie jest gotowa.</p>
+      </blockquote>
+
+      <h3 class="subsection-title">Po co o tym mówimy</h3>
+      <div class="prose">
+        <p>Bo w każdym wdrożeniu nadchodzi moment, w którym ktoś musi powiedzieć głośno: <em>„to nie jest gotowe”</em>. Po stronie firmy wdrożeniowej nie zawsze ma to kto powiedzieć. Po stronie klienta — często nie ma kto, bo zarząd ma firmę do prowadzenia, finanse mają zamknięcia, a księgowość pracuje na pełnych obrotach.</p>
+        <p>To jest miejsce, w którym pracujemy. Nie po stronie systemu. Po stronie klienta — tam, gdzie liczy się to, czy firma wejdzie w nowy etap silniejsza, czy wstrząśnięta.</p>
+      </div>
+
+      <div class="story-cta">
+        <a href="#kontakt" class="btn btn-primary btn-large">Porozmawiajmy o Waszym wdrożeniu</a>
+        <p class="cta-note">Najlepszy moment na rozmowę to ten, w którym jeszcze macie wybór. Niezależnie od tego, czy projekt dopiero się zaczyna, czy już trwa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOŚWIADCZENIE -->
+  <section id="doswiadczenie" class="section section-cases" aria-labelledby="cases-heading">
+    <div class="container">
+      <h2 id="cases-heading" class="section-title">Nasze doświadczenie</h2>
+      <p class="section-lead muted">Realizowałyśmy wdrożenia systemów ERP w organizacjach o wysokim poziomie złożoności - obejmujących dziesiątki spółek, setki użytkowników i zaawansowane procesy finansowe.</p>
+      <p class="section-lead muted">Nasze doświadczenie obejmuje zarówno projektowanie docelowych modeli finansowych i procesowych, jak i prowadzenie wdrożeń oraz stabilizację systemów po uruchomieniu.</p>
+
+      <h3 class="subsection-title">Wybrane projekty</h3>
+      <div class="project-list">
+        <article class="project-card">
+          <h4>SAP Business One - Grupa Capital Park (real estate)</h4>
+          <p>Wdrożenie obejmowało kompleksowe uporządkowanie obszaru finansowego i raportowego dla grupy obejmującej ok. 60 spółek i 50 nieruchomości.</p>
+          <ul class="bullet-list">
+            <li>wdrożenie elektronicznego obiegu dokumentów i pełnej księgowości grupy</li>
+            <li>przygotowanie jednostkowego i skonsolidowanego raportowania (statutowego i zarządczego)</li>
+            <li>automatyzacja rozliczeń międzyspółkowych oraz procesów cash-flow</li>
+            <li>zarządzanie pożyczkami wewnątrzgrupowymi</li>
+            <li>zaprojektowanie schematów księgowań dla nieruchomości inwestycyjnych</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h4>SAP Business One - Grupa Globalworth (real estate)</h4>
+          <p>Projekt obejmował wdrożenie systemu dla grupy obejmującej ok. 40 spółek oraz portfel nieruchomości z ponad 700 najemcami.</p>
+          <ul class="bullet-list">
+            <li>integracja księgowości, property i facility management</li>
+            <li>raportowanie jednostkowe i skonsolidowane (również w EUR)</li>
+            <li>automatyzacja procesów międzyspółkowych i cash-flow</li>
+            <li>zarządzanie procesami inwestycyjnymi (capex)</li>
+            <li>wdrożenie spójnych zasad księgowania dla nieruchomości inwestycyjnych</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h4>Microsoft Dynamics 365 Business Central - Grupa Luxvet (usługi weterynaryjne)</h4>
+          <p>Wdrożenie systemu dla rozwijającej się grupy o rozproszonej strukturze.</p>
+          <ul class="bullet-list">
+            <li>księgowość i raportowanie dla wielu spółek</li>
+            <li>przygotowanie do KSeF oraz JPK CIT</li>
+            <li>wdrożenie elektronicznego obiegu dokumentów</li>
+            <li>automatyzacja cash-flow i procesów inwestycyjnych</li>
+            <li>dostosowanie systemu do specyfiki dynamicznie rosnącej organizacji</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h4>Enova (księgowość i kadry) - KR Group / Luxvet</h4>
+          <p>Projekty obejmujące wdrożenia i dostosowanie systemów do złożonych struktur organizacyjnych.</p>
+          <ul class="bullet-list">
+            <li>projektowanie planów kont i wymiarów analitycznych dla różnych branż</li>
+            <li>wdrożenie kadr i płac dla organizacji zatrudniającej ponad 800 pracowników</li>
+            <li>dostosowanie systemów do złożonych procesów HR i raportowania</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h4>Inne systemy</h4>
+          <p>Pracowałyśmy również z rozwiązaniami takimi jak Comarch Optima oraz Oracle, wspierając organizacje w dostosowaniu systemów do ich procesów oraz w rozwiązywaniu złożonych problemów wdrożeniowych i powdrożeniowych.</p>
+        </article>
+      </div>
+
+      <h3 class="subsection-title">Co łączy te projekty</h3>
+      <ul class="cases-list">
+        <li>uporządkowanie procesów przed wdrożeniem systemu</li>
+        <li>zaprojektowanie spójnego modelu danych i raportowania</li>
+        <li>automatyzacja kluczowych obszarów finansowych</li>
+        <li>przełożenie potrzeb biznesu na rozwiązania systemowe</li>
+      </ul>
+      <p class="positioning-note">Dzięki temu wdrożenia nie kończą się na uruchomieniu systemu - ale realnie poprawiają sposób zarządzania organizacją.</p>
+    </div>
+  </section>
+
+  <!-- CTA BLOCK -->
+  <section class="section section-cta-block" aria-labelledby="cta-heading">
+    <div class="container narrow">
+      <h2 id="cta-heading" class="cta-title">Jeśli ERP ma być fundamentem — nie zaczynaj bez struktury</h2>
+      <a href="#kontakt" class="btn btn-primary btn-large">Umów rozmowę</a>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="section section-contact" aria-labelledby="kontakt-heading">
+    <div class="container contact-layout">
+      <div class="contact-intro">
+        <h2 id="kontakt-heading" class="section-title">Kontakt</h2>
+        <p class="section-lead muted">Napisz, na jakim etapie jest projekt <strong>ERP</strong> lub audyt <strong>danych finansowych</strong>. Odpowiemy zwięźle.</p>
+        <div class="team-block">
+          <p class="team-name">Małgorzata Koc</p>
+          <p class="team-name">Elżbieta Warszawska</p>
+        </div>
+        <p class="contact-email"><a href="mailto:kontakt@axite.pl">kontakt@axite.pl</a></p>
+      </div>
+
+      <!--
+        FORM: currently handled by script.js with a simulated response.
+        To enable real submissions, replace the fetch URL in script.js with
+        your backend endpoint or a service like Formspree:
+        https://formspree.io/f/YOUR_FORM_ID
+      -->
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Imię i nazwisko</label>
+          <input type="text" id="name" name="name" required autocomplete="name" placeholder="Imię i nazwisko">
+        </div>
+        <div class="form-row">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="email@firma.pl">
+        </div>
+        <div class="form-row">
+          <label for="company">Firma <span class="optional">(opcjonalnie)</span></label>
+          <input type="text" id="company" name="company" autocomplete="organization" placeholder="Nazwa firmy">
+        </div>
+        <div class="form-row">
+          <label for="message">Wiadomość</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Krótko: etap projektu, system, oczekiwania."></textarea>
+        </div>
+        <div class="form-error" id="form-error" role="alert" aria-live="polite" hidden></div>
+        <button type="submit" class="btn btn-primary">Wyślij</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-brand">Axite</p>
+    <p class="footer-tagline">Niezależny partner we wdrożeniach ERP · finanse · governance · kontrola procesów.</p>
+    <p class="footer-claims" aria-hidden="true">ERP bez chaosu · Finanse pod kontrolą systemu</p>
+    <p class="footer-copy">&copy; <span id="year"></span> Axite. Wszelkie prawa zastrzeżone.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
