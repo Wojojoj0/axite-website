@@ -366,6 +366,33 @@ a:hover {
   opacity: 1;
 }
 
+/*
+ * Wariant obrazkowy trust bara — gotowy do użycia, kiedy dostarczone
+ * zostaną logotypy w odpowiednim formacie:
+ *   - SVG monochromatyczne (idealnie), lub
+ *   - PNG z transparentnym tłem, min. 240px wysokości
+ *
+ * Użycie w HTML:
+ *   <img src="logos/capital-park.svg" alt="Capital Park" class="trust-logo">
+ *
+ * Wszystkie logotypy zostaną wyrównane do tej samej wysokości i opacity,
+ * dzięki czemu zachowają wizualną spójność niezależnie od proporcji.
+ */
+.trust-logo {
+  height: 28px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  opacity: 0.65;
+  filter: grayscale(1);
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.trust-logo:hover {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
 /* ── Sections (shared) ──────────────────────────────────────────── */
 
 .section {
